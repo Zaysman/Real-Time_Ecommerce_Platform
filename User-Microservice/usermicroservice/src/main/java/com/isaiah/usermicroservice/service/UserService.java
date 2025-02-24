@@ -17,7 +17,7 @@ public class UserService {
 	private UserRepository userRepository;
 	
 	public User createUser(User user) {
-		Optional<User> existingUser = userRepository.findByUsername(user.getUsername());
+		Optional<User> existingUser = userRepository.findByusername(user.getUsername());
 		if(existingUser.isPresent()) {
 			throw new RuntimeException("Username already exists");
 		}
@@ -31,7 +31,7 @@ public class UserService {
 	}
 	
 	public User readUserByUsername(String username) {
-		return userRepository.findByUsername(username).orElse(null);
+		return userRepository.findByusername(username).orElse(null);
 	}
 	
 	public User updateUser(User user) {

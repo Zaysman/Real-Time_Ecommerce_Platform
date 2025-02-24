@@ -3,7 +3,7 @@ package com.isaiah.usermicroservice.object;
 import jakarta.persistence.*;
 
 @Entity //Every Persistent POJO class is an entity and is declared using the @Entity annotation at class level
-@Table(name="/api/users", uniqueConstraints = @UniqueConstraint(columnNames = "username")) //Defines the table the object is supposed to use. Hibernate will use the class name as the table be default
+@Table(name="users", uniqueConstraints = @UniqueConstraint(columnNames = "username")) //Defines the table the object is supposed to use. Hibernate will use the class name as the table be default
 public class User {
 	
 	@Id

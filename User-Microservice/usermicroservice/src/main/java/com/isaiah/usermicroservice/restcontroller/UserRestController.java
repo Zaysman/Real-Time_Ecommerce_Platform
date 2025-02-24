@@ -71,7 +71,7 @@ public class UserRestController {
 	}
 	
 	//Update User endpoint
-	@PutMapping(value = "/users/update/{userid}")
+	@PutMapping(value = "/update/{userid}")
 	public User UpdateUser(@PathVariable long userid, @RequestBody User user) {
 		User existingUser = userService.readUserByUserid(userid);
 		
