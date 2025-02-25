@@ -28,7 +28,34 @@ public class ProductRestController {
 	@GetMapping(value = "/{productid}", produces = JSON)
 	public Product getProductByProductId(@PathVariable long productid) {
 		return productService.readProductByProductid(productid);
-	} 
+	}
+	
+	@PostMapping(value = "/add", produces = JSON, consumes = JSON)
+	public Product addProduct(@RequestBody Product product) {
+		return productService.createProduct(product);
+	}
+	
+	@PutMapping(value = "/update/{productId}", produces = JSON, consumes = JSON)
+	public Product updateProductByProductId(@PathVariable long productId, @RequestBody Product product) {
+		Product existingProduct = productService.readProductByProductid(productId);
+		
+		if(existingProduct == null) {
+			return null;
+		}
+		existingProduct.setProductDesc(product.getProductDesc());
+		existingProduct.setProductName(product.getProductName());
+		existingProduct.setProductPrice(product.getProductPrice());
+		existingProduct.setProductStock(product.getProductStock());
+		
+		productService.updateProduct(existingProduct);
+		return existingProduct;
+	}
+	
+	@DeleteMapping(value = "/delete/{productId}")
+	public void deleteProductByProductId(@PathVariable long productId) {
+		productService.deleteProductByProductId(productId);
+		
+	}
 		
 	
 	
