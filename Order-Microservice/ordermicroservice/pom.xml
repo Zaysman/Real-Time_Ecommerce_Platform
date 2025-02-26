@@ -59,6 +59,20 @@
 			<artifactId>spring-kafka-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<!-- Dependency to add Spring Boot Web Dependency-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<!-- Dependency to add common objects-->
+		<dependency>
+			<groupId>com.realtimee_commerceplatform</groupId>
+  			<artifactId>common</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
