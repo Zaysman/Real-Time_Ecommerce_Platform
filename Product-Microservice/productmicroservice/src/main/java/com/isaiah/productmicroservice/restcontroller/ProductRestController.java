@@ -1,6 +1,7 @@
 package com.isaiah.productmicroservice.restcontroller;
 
-import com.isaiah.productmicroservice.object.Product;
+//import com.isaiah.productmicroservice.object.Product;
+import com.realtimee_commerceplatform.common.object.Product;
 import com.isaiah.productmicroservice.service.ProductService;
 
 import org.springframework.beans.factory.annotation.Autowired;

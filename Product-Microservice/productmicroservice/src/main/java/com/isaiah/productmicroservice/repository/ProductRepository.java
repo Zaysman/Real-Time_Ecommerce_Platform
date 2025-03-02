@@ -1,6 +1,7 @@
 package com.isaiah.productmicroservice.repository;
 
-import com.isaiah.productmicroservice.object.Product;
+//import com.isaiah.productmicroservice.object.Product;
+import com.realtimee_commerceplatform.common.object.Product;
 
 import java.util.List;
 import java.util.Optional;

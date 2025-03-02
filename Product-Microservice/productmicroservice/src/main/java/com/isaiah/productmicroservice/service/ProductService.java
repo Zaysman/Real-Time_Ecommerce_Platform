@@ -1,8 +1,11 @@
 package com.isaiah.productmicroservice.service;
 
 
-import com.isaiah.productmicroservice.object.Product;
+//import com.isaiah.productmicroservice.object.Product;
+import com.realtimee_commerceplatform.common.object.Product;
 import com.isaiah.productmicroservice.repository.ProductRepository;
+
+
 
 import jakarta.transaction.Transactional;
 
