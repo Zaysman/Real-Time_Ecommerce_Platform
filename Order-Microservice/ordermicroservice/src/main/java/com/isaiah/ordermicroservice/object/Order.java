@@ -4,6 +4,7 @@ import com.realtimee_commerceplatform.common.object.Product;
 
 import jakarta.persistence.*;
 import java.util.LinkedList;
+import java.util.List;
 
 
 @Entity
@@ -16,7 +17,12 @@ public class Order {
 	@Column(name = "id")
 	private long orderId;
 	
-	private LinkedList<OrderedProduct> orderedProducts;
+//	private LinkedList<OrderedProduct> orderedProducts;
+	
+	private List<OrderedProduct> orderedProducts;
+	
+	@Column(name = "userId")
+	private long userId;
 	
 	@Column(name = "orderCost")
 	private float orderCost;
@@ -43,13 +49,30 @@ public class Order {
 	public void setOrderId(long orderId) {
 		this.orderId = orderId;
 	}
+	
+	public long getUserId() {
+		return userId;
+	}
+	
+	public void setUserId(long userId) {
+		this.userId = userId;
+	}
+	
 
-	public LinkedList<OrderedProduct> getOrderProducts() {
-		return orderedProducts;
+//	public LinkedList<OrderedProduct> getOrderProducts() {
+//		return orderedProducts;
+//	}
+	
+	public List<OrderedProduct> getOrderProducts() {
+		return orderedProducts;  
 	}
 
-	public void setOrderProducts(LinkedList<OrderedProduct> orderProducts) {
-		this.orderedProducts = orderProducts;
+//	public void setOrderProducts(LinkedList<OrderedProduct> orderProducts) {
+//		this.orderedProducts = orderProducts;
+//	}
+	
+	public void setOrderProducts(List<OrderedProduct> orderedProducts) {
+		this.orderedProducts = orderedProducts;
 	}
 
 	public float getOrderCost() {

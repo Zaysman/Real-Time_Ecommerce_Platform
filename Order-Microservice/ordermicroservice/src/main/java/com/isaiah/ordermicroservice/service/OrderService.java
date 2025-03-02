@@ -48,6 +48,11 @@ public class OrderService {
 		return orderRepo.findByorderId(orderId).orElse(null);
 	}
 	
+	public List<Order> readOrdersByUserId(long userId) {
+		return orderRepo.findByuserId(userId);
+		
+	}
+	
 	public OrderedProduct readOrderedProductByEntryId(long entryId) {
 		return orderedProductRepo.findByentryId(entryId).orElse(null);
 	}
