@@ -55,7 +55,7 @@ public class PaymentService {
 	}
 	
 	@Transactional
-	public void deletePaymentByUserId(long userId) {
+	public void deletePaymentsByUserId(long userId) {
 		paymentRepository.deleteByuserId(userId);
 	}
 	
